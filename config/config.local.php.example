@@ -1,0 +1,5 @@
+<?php
+define('TWILIO_SID', '');
+define('TWILIO_AUTH_TOKEN', '');
+define('TWILIO_PHONE', '');
+define('TWILIO_MESSAGING_SID', '');

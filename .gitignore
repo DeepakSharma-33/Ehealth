@@ -1,0 +1,4 @@
+config/config.local.php
+.env
+.env.local
+public/ehealth_center_doctor/videoKey.txt

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body>
+    <w:p>
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:after="200"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="32"/>
+          <w:rFonts w:ascii="Segoe UI" w:hAnsi="Segoe UI"/>
+        </w:rPr>
+        <w:t>SRMS eHealth Website Flow</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:jc w:val="center"/>
+        <w:spacing w:line="280" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Consolas" w:hAnsi="Consolas"/>
+          <w:sz w:val="22"/>
+        </w:rPr>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>|          HOME PAGE           |</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>|</w:t>
+        <w:br/>
+        <w:t>v</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>|        CHOOSE PORTAL         |</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>|</w:t>
+        <w:br/>
+        <w:t>v</w:t>
+        <w:br/>
+        <w:t>+--------------------------------------------------------------+</w:t>
+        <w:br/>
+        <w:t>| PATIENT / EXECUTIVE / DOCTOR / STAFF / TELESTUDIO / ADMIN   |</w:t>
+        <w:br/>
+        <w:t>+--------------------------------------------------------------+</w:t>
+        <w:br/>
+        <w:t>|</w:t>
+        <w:br/>
+        <w:t>v</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>| EXECUTIVE REGISTERS PATIENT  |</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>|</w:t>
+        <w:br/>
+        <w:t>v</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>| NURSING RECORDS VITALS       |</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>|</w:t>
+        <w:br/>
+        <w:t>v</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>| DOCTOR REVIEWS PATIENT       |</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>|</w:t>
+        <w:br/>
+        <w:t>v</w:t>
+        <w:br/>
+        <w:t>+-----------------------------------------------------+</w:t>
+        <w:br/>
+        <w:t>| DIRECT DIAGNOSIS OR TELECONSULTATION TO SPECIALIST  |</w:t>
+        <w:br/>
+        <w:t>+-----------------------------------------------------+</w:t>
+        <w:br/>
+        <w:t>|</w:t>
+        <w:br/>
+        <w:t>v</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>| PHARMACY DISPENSES MEDICINE  |</w:t>
+        <w:br/>
+        <w:t>+------------------------------+</w:t>
+        <w:br/>
+        <w:t>|</w:t>
+        <w:br/>
+        <w:t>v</w:t>
+        <w:br/>
+        <w:t>+-----------------------------------------------+</w:t>
+        <w:br/>
+        <w:t>| PATIENT RECORDS UPDATED / ADMIN ANALYSIS VIEW |</w:t>
+        <w:br/>
+        <w:t>+-----------------------------------------------+</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:jc w:val="left"/>
+        <w:spacing w:before="220"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Segoe UI" w:hAnsi="Segoe UI"/>
+          <w:sz w:val="22"/>
+        </w:rPr>
+        <w:t>Note: Admin also manages doctor, executive, nursing, technician, pharmacy, and admin registrations.</w:t>
+      </w:r>
+    </w:p>
+    <w:sectPr>
+      <w:pgSz w:w="12240" w:h="15840"/>
+      <w:pgMar w:top="720" w:right="720" w:bottom="720" w:left="720" w:header="708" w:footer="708" w:gutter="0"/>
+    </w:sectPr>
+  </w:body>
+</w:document>

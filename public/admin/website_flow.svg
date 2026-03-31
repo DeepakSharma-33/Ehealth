@@ -1,0 +1,329 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1500" role="img" aria-labelledby="title desc">
+  <title id="title">SRMS eHealth website flowchart</title>
+  <desc id="desc">Flowchart showing the SRMS eHealth website entry portals, staff split, patient journey, telemedicine branch, pharmacy handoff, and admin analysis flow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eef8f1"/>
+      <stop offset="100%" stop-color="#d8ecde"/>
+    </linearGradient>
+    <linearGradient id="head" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d7a58"/>
+      <stop offset="100%" stop-color="#13523c"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#16372b" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#3d6754"/>
+    </marker>
+    <style>
+      .title { font: 800 38px 'Segoe UI', Arial, sans-serif; fill: #153528; }
+      .subtitle { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #5d7568; }
+      .section-kicker { font: 800 12px 'Segoe UI', Arial, sans-serif; letter-spacing: 2px; text-transform: uppercase; fill: #1d7a58; }
+      .section-title { font: 700 26px 'Segoe UI', Arial, sans-serif; fill: #163528; }
+      .line { stroke: #537565; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .line-soft { stroke: #6e8d7e; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .line-dash { stroke: #7c988b; stroke-width: 2.5; stroke-dasharray: 8 8; fill: none; marker-end: url(#arrow); }
+      .panel { fill: rgba(255,255,255,0.90); stroke: #cfe2d5; stroke-width: 2; }
+      .box { rx: 20; ry: 20; stroke-width: 2; filter: url(#shadow); }
+      .home { fill: url(#head); stroke: #13523c; }
+      .patient { fill: #edf5ff; stroke: #d5e4f4; }
+      .exec { fill: #fbf2de; stroke: #e9d49f; }
+      .doctor { fill: #e8f5ec; stroke: #cfe3d6; }
+      .tele { fill: #e7f5f4; stroke: #cbe4e1; }
+      .staff { fill: #f3f1ff; stroke: #ddd8f3; }
+      .admin { fill: #f9ede7; stroke: #ead8d0; }
+      .step { fill: #ffffff; stroke: #d3e3d7; }
+      .step-tele { fill: #f8fcfc; stroke: #cfe4e1; }
+      .analysis { fill: #f7faf8; stroke: #d7e6dc; }
+      .kicker { font: 800 10px 'Segoe UI', Arial, sans-serif; letter-spacing: 1.8px; text-transform: uppercase; fill: #5e7a6a; }
+      .home .kicker, .home-kicker { fill: rgba(255,255,255,0.78); }
+      .box-title { font: 700 22px 'Segoe UI', Arial, sans-serif; fill: #173629; }
+      .step-title { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #173629; }
+      .mini-title { font: 700 16px 'Segoe UI', Arial, sans-serif; fill: #173629; }
+      .home-title { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .box-desc { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #5d7568; }
+      .home-desc { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: rgba(255,255,255,0.84); }
+      .path { font: 700 11px Consolas, 'Courier New', monospace; fill: #315446; }
+      .path-home { fill: rgba(255,255,255,0.90); }
+      .step-no { font: 800 12px 'Segoe UI', Arial, sans-serif; fill: #1d7a58; }
+      .branch-title { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #173629; }
+      .note { font: 600 13px 'Segoe UI', Arial, sans-serif; fill: #5f786a; }
+      .admin-small { font: 600 13px 'Segoe UI', Arial, sans-serif; fill: #5c7366; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1500" fill="url(#bg)"/>
+  <rect x="40" y="30" width="1720" height="72" rx="28" fill="#ffffff" opacity="0.92" stroke="#d5e5da"/>
+  <text x="76" y="74" class="title">SRMS eHealth Website Flowchart</text>
+  <text x="76" y="96" class="subtitle">Single image view of the main website flow, care journey, staff branch, telemedicine path, pharmacy handoff, and admin analysis.</text>
+
+  <rect x="40" y="130" width="1720" height="430" rx="28" class="panel"/>
+  <text x="74" y="168" class="section-kicker">Entry map</text>
+  <text x="74" y="200" class="section-title">How people enter the website</text>
+
+  <g class="home">
+    <rect x="760" y="218" width="280" height="96" class="box"/>
+  </g>
+  <text x="790" y="248" class="home-kicker">Public start</text>
+  <text x="790" y="278" class="home-title">Home Page</text>
+  <text x="790" y="298" class="home-desc">Main landing page with all login choices.</text>
+
+  <path d="M900 314 L900 352 L175 352" class="line"/>
+  <path d="M175 352 L1575 352" class="line"/>
+  <path d="M175 352 L175 382" class="line-soft"/>
+  <path d="M455 352 L455 382" class="line-soft"/>
+  <path d="M735 352 L735 382" class="line-soft"/>
+  <path d="M1015 352 L1015 382" class="line-soft"/>
+  <path d="M1295 352 L1295 382" class="line-soft"/>
+  <path d="M1575 352 L1575 382" class="line-soft"/>
+
+  <g>
+    <rect x="60" y="382" width="230" height="122" class="box patient"/>
+    <text x="84" y="410" class="kicker">Portal</text>
+    <text x="84" y="438" class="box-title">Patient Portal</text>
+    <text x="84" y="462" class="box-desc">Medical records, vitals history,</text>
+    <text x="84" y="482" class="box-desc">and self-service access.</text>
+    <text x="84" y="502" class="path">/public/patient/patient_login.php</text>
+  </g>
+
+  <g>
+    <rect x="340" y="382" width="230" height="122" class="box exec"/>
+    <text x="364" y="410" class="kicker">Portal</text>
+    <text x="364" y="438" class="box-title">Executive Portal</text>
+    <text x="364" y="462" class="box-desc">Registration, slips, patient search,</text>
+    <text x="364" y="482" class="box-desc">vitals access, and reprints.</text>
+    <text x="364" y="502" class="path">/public/executive/executive_login.php</text>
+  </g>
+
+  <g>
+    <rect x="620" y="382" width="230" height="122" class="box doctor"/>
+    <text x="644" y="410" class="kicker">Portal</text>
+    <text x="644" y="438" class="box-title">eHealth Doctor</text>
+    <text x="644" y="462" class="box-desc">Patient queue, diagnosis, waiting room,</text>
+    <text x="644" y="482" class="box-desc">history, and diagnosis printing.</text>
+    <text x="644" y="502" class="path">/public/ehealth_center_doctor/doctor_login.php</text>
+  </g>
+
+  <g>
+    <rect x="900" y="382" width="230" height="122" class="box tele"/>
+    <text x="924" y="410" class="kicker">Portal</text>
+    <text x="924" y="438" class="box-title">Telestudio Doctor</text>
+    <text x="924" y="462" class="box-desc">Availability, specialist queue,</text>
+    <text x="924" y="482" class="box-desc">teleconsultation history.</text>
+    <text x="924" y="502" class="path">/public/telestudio_doctor/telestudio_doctor_login.php</text>
+  </g>
+
+  <g>
+    <rect x="1180" y="382" width="230" height="122" class="box staff"/>
+    <text x="1204" y="410" class="kicker">Portal</text>
+    <text x="1204" y="438" class="box-title">Staff Portal</text>
+    <text x="1204" y="462" class="box-desc">Shared entry for nursing, technician,</text>
+    <text x="1204" y="482" class="box-desc">and pharmacy staff.</text>
+    <text x="1204" y="502" class="path">/public/staff/staff_login.php</text>
+  </g>
+
+  <g>
+    <rect x="1460" y="382" width="230" height="122" class="box admin"/>
+    <text x="1484" y="410" class="kicker">Portal</text>
+    <text x="1484" y="438" class="box-title">Admin Portal</text>
+    <text x="1484" y="462" class="box-desc">User registration control, dashboards,</text>
+    <text x="1484" y="482" class="box-desc">analysis, and oversight.</text>
+    <text x="1484" y="502" class="path">/public/admin/admin_login.php</text>
+  </g>
+
+  <path d="M1295 504 L1295 530 L1085 530" class="line"/>
+  <path d="M1085 530 L1625 530" class="line"/>
+  <path d="M1085 530 L1085 560" class="line-soft"/>
+  <path d="M1355 530 L1355 560" class="line-soft"/>
+  <path d="M1625 530 L1625 560" class="line-soft"/>
+  <text x="1060" y="548" class="note">Staff portal split</text>
+
+  <g>
+    <rect x="970" y="560" width="230" height="92" class="box doctor"/>
+    <text x="994" y="590" class="kicker">Staff role</text>
+    <text x="994" y="618" class="box-title">Nursing Staff</text>
+    <text x="994" y="638" class="box-desc">Records vitals and prepares the queue.</text>
+  </g>
+
+  <g>
+    <rect x="1240" y="560" width="230" height="92" class="box staff"/>
+    <text x="1264" y="590" class="kicker">Staff role</text>
+    <text x="1264" y="618" class="box-title">Technician Staff</text>
+    <text x="1264" y="638" class="box-desc">Technician-side workflow and support.</text>
+  </g>
+
+  <g>
+    <rect x="1510" y="560" width="230" height="92" class="box exec"/>
+    <text x="1534" y="590" class="kicker">Staff role</text>
+    <text x="1534" y="618" class="box-title">Pharmacy Staff</text>
+    <text x="1534" y="638" class="box-desc">Dispenses medicines and records charges.</text>
+  </g>
+
+  <rect x="40" y="590" width="1720" height="610" rx="28" class="panel"/>
+  <text x="74" y="628" class="section-kicker">Patient journey</text>
+  <text x="74" y="660" class="section-title">Main care flow from registration to treatment</text>
+
+  <g>
+    <rect x="60" y="710" width="250" height="110" class="box exec"/>
+    <text x="88" y="740" class="step-no">Step 1</text>
+    <text x="88" y="770" class="box-title">Executive Dashboard</text>
+    <text x="88" y="792" class="box-desc">Start visit and open patient onboarding.</text>
+  </g>
+  <g>
+    <rect x="340" y="710" width="250" height="110" class="box exec"/>
+    <text x="368" y="740" class="step-no">Step 2</text>
+    <text x="368" y="770" class="box-title">New or Existing Patient</text>
+    <text x="368" y="792" class="box-desc">Register new patient or search old record.</text>
+  </g>
+  <g>
+    <rect x="620" y="710" width="250" height="110" class="box exec"/>
+    <text x="648" y="740" class="step-no">Step 3</text>
+    <text x="648" y="770" class="box-title">Registration Slip</text>
+    <text x="648" y="792" class="box-desc">Visit is created and slip can be printed.</text>
+  </g>
+  <g>
+    <rect x="900" y="710" width="250" height="110" class="box doctor"/>
+    <text x="928" y="740" class="step-no">Step 4</text>
+    <text x="928" y="770" class="box-title">Nursing Vitals</text>
+    <text x="928" y="792" class="box-desc">Vitals are recorded for doctor review.</text>
+  </g>
+  <g>
+    <rect x="1180" y="710" width="250" height="110" class="box doctor"/>
+    <text x="1208" y="740" class="step-no">Step 5</text>
+    <text x="1208" y="770" class="box-title">Doctor Queue</text>
+    <text x="1208" y="792" class="box-desc">Doctor opens the patient from queue.</text>
+  </g>
+  <g>
+    <rect x="1460" y="710" width="250" height="110" class="box doctor"/>
+    <text x="1488" y="740" class="step-no">Step 6</text>
+    <text x="1488" y="770" class="box-title">Consultation Select</text>
+    <text x="1488" y="792" class="box-desc">Choose in-person diagnosis or teleconsult.</text>
+  </g>
+
+  <path d="M310 765 L340 765" class="line"/>
+  <path d="M590 765 L620 765" class="line"/>
+  <path d="M870 765 L900 765" class="line"/>
+  <path d="M1150 765 L1180 765" class="line"/>
+  <path d="M1430 765 L1460 765" class="line"/>
+
+  <path d="M1585 820 L1585 890 L450 890" class="line"/>
+  <path d="M1585 890 L1350 890" class="line"/>
+  <path d="M450 890 L450 930" class="line-soft"/>
+  <path d="M1350 890 L1350 930" class="line-soft"/>
+
+  <rect x="60" y="930" width="780" height="220" rx="24" fill="#fbfefc" stroke="#d4e4da" stroke-width="2"/>
+  <text x="90" y="968" class="section-kicker">Path A</text>
+  <text x="90" y="998" class="branch-title">In-person diagnosis branch</text>
+
+  <g>
+    <rect x="90" y="1020" width="170" height="96" class="box step"/>
+    <text x="110" y="1046" class="step-no">Step 7</text>
+    <text x="110" y="1072" class="step-title">Diagnosis Form</text>
+    <text x="110" y="1094" class="box-desc">Doctor records notes and medicines.</text>
+  </g>
+  <g>
+    <rect x="280" y="1020" width="170" height="96" class="box step"/>
+    <text x="300" y="1046" class="step-no">Step 8</text>
+    <text x="300" y="1072" class="step-title">Print Diagnosis</text>
+    <text x="300" y="1094" class="box-desc">Slip can be printed or reprinted.</text>
+  </g>
+  <g>
+    <rect x="470" y="1020" width="170" height="96" class="box step"/>
+    <text x="490" y="1046" class="step-no">Step 9</text>
+    <text x="490" y="1072" class="step-title">Pharmacy Slip</text>
+    <text x="490" y="1094" class="box-desc">Medicine is dispensed and saved.</text>
+  </g>
+  <g>
+    <rect x="660" y="1020" width="150" height="96" class="box step"/>
+    <text x="680" y="1046" class="step-no">Step 10</text>
+    <text x="680" y="1072" class="step-title">Patient Records</text>
+    <text x="680" y="1094" class="box-desc">Visit remains visible later.</text>
+  </g>
+  <path d="M260 1068 L280 1068" class="line"/>
+  <path d="M450 1068 L470 1068" class="line"/>
+  <path d="M640 1068 L660 1068" class="line"/>
+
+  <rect x="960" y="930" width="780" height="220" rx="24" fill="#fbfefe" stroke="#d0e5e2" stroke-width="2"/>
+  <text x="990" y="968" class="section-kicker">Path B</text>
+  <text x="990" y="998" class="branch-title">Telemedicine escalation branch</text>
+
+  <g>
+    <rect x="990" y="1020" width="118" height="108" class="box step-tele"/>
+    <text x="1008" y="1046" class="step-no">Step 7</text>
+    <text x="1008" y="1072" class="mini-title">Choose</text>
+    <text x="1008" y="1092" class="mini-title">Tele Doctor</text>
+  </g>
+  <g>
+    <rect x="1120" y="1020" width="118" height="108" class="box step-tele"/>
+    <text x="1138" y="1046" class="step-no">Step 8</text>
+    <text x="1138" y="1072" class="mini-title">Create</text>
+    <text x="1138" y="1092" class="mini-title">Teleconsult</text>
+  </g>
+  <g>
+    <rect x="1250" y="1020" width="118" height="108" class="box step-tele"/>
+    <text x="1268" y="1046" class="step-no">Step 9</text>
+    <text x="1268" y="1072" class="mini-title">Waiting</text>
+    <text x="1268" y="1092" class="mini-title">Room</text>
+  </g>
+  <g>
+    <rect x="1380" y="1020" width="118" height="108" class="box step-tele"/>
+    <text x="1398" y="1046" class="step-no">Step 10</text>
+    <text x="1398" y="1072" class="mini-title">Specialist</text>
+    <text x="1398" y="1092" class="mini-title">Diagnosis</text>
+  </g>
+  <g>
+    <rect x="1510" y="1020" width="118" height="108" class="box step-tele"/>
+    <text x="1528" y="1046" class="step-no">Step 11</text>
+    <text x="1528" y="1072" class="mini-title">Print and</text>
+    <text x="1528" y="1092" class="mini-title">Charges</text>
+  </g>
+  <g>
+    <rect x="1640" y="1020" width="90" height="108" class="box step-tele"/>
+    <text x="1652" y="1046" class="step-no">Step 12</text>
+    <text x="1652" y="1072" class="mini-title">Rx +</text>
+    <text x="1652" y="1092" class="mini-title">Records</text>
+  </g>
+  <path d="M1108 1074 L1120 1074" class="line"/>
+  <path d="M1238 1074 L1250 1074" class="line"/>
+  <path d="M1368 1074 L1380 1074" class="line"/>
+  <path d="M1498 1074 L1510 1074" class="line"/>
+  <path d="M1628 1074 L1640 1074" class="line"/>
+
+  <text x="1280" y="1144" class="note">Tele path ends in print, billing, pharmacy, and later record access.</text>
+
+  <rect x="40" y="1230" width="1720" height="220" rx="28" class="panel"/>
+  <text x="74" y="1268" class="section-kicker">Admin oversight</text>
+  <text x="74" y="1300" class="section-title">How admin controls and reviews the platform</text>
+
+  <path d="M1575 504 L1575 1230" class="line-dash"/>
+
+  <g>
+    <rect x="80" y="1330" width="320" height="88" class="box admin"/>
+    <text x="106" y="1360" class="kicker">Admin step</text>
+    <text x="106" y="1388" class="box-title">Admin Dashboard</text>
+    <text x="106" y="1408" class="box-desc">Main control point for platform management.</text>
+  </g>
+  <g>
+    <rect x="430" y="1330" width="340" height="88" class="box admin"/>
+    <text x="456" y="1360" class="kicker">Admin step</text>
+    <text x="456" y="1388" class="box-title">Role Registration</text>
+    <text x="456" y="1408" class="box-desc">Doctors, executives, nursing, technician, pharmacy, admins.</text>
+  </g>
+  <g>
+    <rect x="800" y="1330" width="360" height="88" class="box analysis"/>
+    <text x="826" y="1360" class="kicker">Admin step</text>
+    <text x="826" y="1388" class="box-title">Analysis Board</text>
+    <text x="826" y="1408" class="box-desc">Patients, doctors, executive totals, doctor totals, pharmacy totals.</text>
+  </g>
+  <g>
+    <rect x="1190" y="1330" width="530" height="88" class="box analysis"/>
+    <text x="1216" y="1360" class="kicker">Revenue split</text>
+    <text x="1216" y="1388" class="box-title">Registration | Telemedicine | Pharmacy</text>
+    <text x="1216" y="1408" class="admin-small">Selected range totals, executive charges, doctor charges, and pharmacy collections.</text>
+  </g>
+
+  <path d="M400 1374 L430 1374" class="line"/>
+  <path d="M770 1374 L800 1374" class="line"/>
+  <path d="M1160 1374 L1190 1374" class="line"/>
+</svg>

@@ -1,0 +1,69 @@
+ALTER TABLE patients 
+MODIFY COLUMN diagnosis_status ENUM('pending', 'completed') DEFAULT 'pending';
+
+// drop telestudio_sessions TABLE
+
+-- ── TeleConsult Sessions ────────────────────────────────────
+CREATE TABLE IF NOT EXISTS teleconsult_sessions (
+    id                    INT AUTO_INCREMENT PRIMARY KEY,
+    diagnosis_id          INT DEFAULT NULL,
+    patient_id            VARCHAR(15) NOT NULL,
+    patient_name          VARCHAR(255) NOT NULL DEFAULT '',
+    ehealth_doctor_id     VARCHAR(15) NOT NULL,
+    ehealth_doctor_name   VARCHAR(255) NOT NULL DEFAULT '',
+    telestudio_doctor_id  VARCHAR(15) NOT NULL,
+    telestudio_doctor_name VARCHAR(255) NOT NULL DEFAULT '',
+    teleconsult_reason    TEXT DEFAULT NULL,
+    chief_complaint       TEXT DEFAULT NULL,
+    clinical_notes        TEXT DEFAULT NULL,
+    remarks               TEXT DEFAULT NULL,
+    accept_wait_message   TEXT DEFAULT NULL,
+    reject_message        TEXT DEFAULT NULL,
+    whereby_room_url      VARCHAR(500) DEFAULT NULL,
+    whereby_host_url      VARCHAR(500) DEFAULT NULL,
+    whereby_meeting_id    VARCHAR(255) DEFAULT NULL,
+    status                ENUM('waiting','accepted','active','completed','cancelled') NOT NULL DEFAULT 'waiting',
+    created_at            DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at            DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    accepted_at           DATETIME DEFAULT NULL,
+    started_at            DATETIME DEFAULT NULL,
+    ended_at              DATETIME DEFAULT NULL,
+    INDEX idx_ehealth_doc (ehealth_doctor_id),
+    INDEX idx_telestudio_doc (telestudio_doctor_id),
+    INDEX idx_patient (patient_id),
+    INDEX idx_status (status)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ── TeleStudio Diagnosis Records ───────────────────────────
+CREATE TABLE IF NOT EXISTS telestudio_diagnosis (
+    id                    INT AUTO_INCREMENT PRIMARY KEY,
+    session_id            INT NOT NULL,
+    patient_id            VARCHAR(15) NOT NULL,
+    ehealth_doctor_id     VARCHAR(15) NOT NULL,
+    ehealth_doctor_name   VARCHAR(255) NOT NULL DEFAULT '',
+    telestudio_doctor_id  VARCHAR(15) NOT NULL,
+    telestudio_doctor_name VARCHAR(255) NOT NULL DEFAULT '',
+    consultation_notes    TEXT DEFAULT NULL,
+    primary_diagnosis     TEXT DEFAULT NULL,
+    prescription          TEXT DEFAULT NULL,
+    medicines_json        JSON DEFAULT NULL,
+    review_after          VARCHAR(100) DEFAULT NULL,
+    investigation         TEXT DEFAULT NULL,
+    remarks               TEXT DEFAULT NULL,
+    diagnosis_date        DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (session_id) REFERENCES teleconsult_sessions(id) ON DELETE CASCADE,
+    INDEX idx_session (session_id),
+    INDEX idx_patient (patient_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ── Add whereby_room_url to telestudio_doctors if not exists ─
+ALTER TABLE telestudio_doctors
+    ADD COLUMN IF NOT EXISTS whereby_room_url VARCHAR(500) DEFAULT NULL,
+    ADD COLUMN IF NOT EXISTS whereby_host_url VARCHAR(500) DEFAULT NULL;
+
+ALTER TABLE teleconsult_sessions
+    ADD COLUMN IF NOT EXISTS teleconsult_reason TEXT DEFAULT NULL AFTER telestudio_doctor_name,
+    ADD COLUMN IF NOT EXISTS accept_wait_message TEXT DEFAULT NULL AFTER remarks,
+    ADD COLUMN IF NOT EXISTS reject_message TEXT DEFAULT NULL AFTER accept_wait_message,
+    ADD COLUMN IF NOT EXISTS whereby_meeting_id VARCHAR(255) DEFAULT NULL AFTER whereby_host_url,
+    ADD COLUMN IF NOT EXISTS updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP AFTER created_at;
